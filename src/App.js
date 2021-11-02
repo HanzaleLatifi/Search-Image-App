@@ -1,11 +1,21 @@
-import "./App.css";
+import React from "react";
+import './App.css';
+import axios from 'axios'
+import {useState , useEffect} from 'react'
+import Images from "./components/Images";
 
-function App() {
+
+const App=()=> {
+  const [term, setTerm] = useState("")
+  useEffect(() => {
+      axios.get(`https://pixabay.com/api/?key=21860598-f8ba3048534b8b69916a04f61&q=${term}&image_type=photo`)
+     
+  }, [])
   return (
-    <div className="App">
-      <h1 className="bg-red-100 py-8">hi React.js</h1>
+    <div>
+      <Images/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App ;
