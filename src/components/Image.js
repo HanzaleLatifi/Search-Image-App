@@ -3,11 +3,12 @@ function Image({ imageUrl, imageLikes, imageUser, imageTags }) {
 
 
     return (
-        <div className="shadow-md py-2 px-2 m-2 ">
-            <div className="md:w-96 w-72 h-64 mx-auto">
+        <div className="shadow-md py-2 px-2 m-2 transition-all transition-duration-700 hover:shadow-2xl ">
+        
+            <div className="md:w-96 w-72 h-64 mx-auto mb-2">
                 <img src={imageUrl} className="h-full w-full  " />
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 ">
                 <p>UserName : {imageUser}</p>
                 <p>likes: {imageLikes}  </p>
                 <div className="space-x-1">
